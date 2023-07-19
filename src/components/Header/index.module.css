@@ -1,0 +1,131 @@
+/* Common styles for desktop and mobile */
+.header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 20px;
+    background-color: inherit;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+    /* Add blur effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #999;
+}
+
+.logo h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #666;
+}
+
+.auth a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 8px 20px; /* Increased padding for better button size */
+    border: 1px solid #474a51;
+    border-radius: 30px; /* Larger border-radius for a rounded button */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent; /* Initial background is transparent */
+}
+
+.auth a:first-child {
+    margin-left: 0;
+    background-color: #474a51;
+}
+
+.auth a:hover {
+    background-color: #293133;
+    color: #fff;
+}
+
+.burgerNav {
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 9;
+}
+
+.burgerBtn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.burgerBtn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30px;
+    background-color: black;
+    height: 3px;
+    border-radius: 20%;
+}
+
+.burgerBtn span {
+    content: '';
+    position: absolute;
+    top: 13px;
+    width: 30px;
+    background-color: black;
+    height: 3px;
+    border-radius: 20%;
+}
+
+.burgerBtn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 30px;
+    background-color: black;
+    height: 3px;
+    border-radius: 20%;
+    margin-bottom: 1px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+}
+
+@media (max-width: 400px) {
+}

@@ -1,0 +1,165 @@
+/* index.module.css */
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #293133, #474a51); /* Gradient background */
+    color: #fff; /* Text color */
+    height: 80vh;
+}
+
+.description {
+    max-width: 60%;
+    padding: 20px;
+    z-index: 5;
+}
+
+.description h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 1);
+}
+
+.description p {
+    font-size: 1.5em; /* Larger paragraph font size */
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 30px; /* Increased margin for spacing */
+
+    /* Add text shadow */
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 1);
+}
+
+/* index.module.css */
+.description a {
+    color: white; /* Change the text color to white */
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 6em;
+    padding: 15px 30px; /* Increased padding for better button size */
+    border-radius: 30px; /* Larger border-radius for a rounded button */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent; /* Initial background is transparent */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.description a:before,
+.description a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    opacity: 0;
+    pointer-events: none; /* Disable interaction on pseudo-elements */
+    z-index: -1;
+}
+
+.description a:before {
+    background-color: rgba(55, 55, 255, 0.3); /* Smoky color with opacity */
+    animation: smokyEffect 2s infinite; /* Apply animation */
+}
+
+.description a:after {
+    background-color: rgba(55, 255, 255, 0.4); /* Smoky color with opacity */
+    animation: smokyEffect 3s infinite; /* Apply animation */
+}
+
+.description a:hover {
+    background-color: #293133; /* Change the background color to black */
+    color: #fff; /* Change the text color to white on hover */
+}
+
+@keyframes smokyEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.photo {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo img {
+    width: 50em;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for the image */
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .photo {
+        position: absolute;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .photo img {
+        width: 30em;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for the image */
+        z-index: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .description {
+        max-width: 90%;
+    }
+
+    .description h1 {
+        font-size: 28px; /* Adjusted font size for mobile */
+    }
+
+    .description p {
+        font-size: 16px; /* Adjusted font size for mobile */
+        line-height: 1.6;
+    }
+
+    .description a {
+        font-size: 16px; /* Adjusted font size for mobile */
+    }
+
+    .photo {
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .photo img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .description {
+        max-width: 90%;
+        padding-top: 10rem;
+    }
+}
