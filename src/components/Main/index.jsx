@@ -18,7 +18,7 @@ const Main = () => {
       </div>
 
       {/* Photo with rotating border */}
-      <div className={`${styles.photo} ${styles['rotating-border']}`}>
+      <div className={`${styles.photo}`}>
         <img src={mainImg} alt="Description of the" />
       </div>
     </div>

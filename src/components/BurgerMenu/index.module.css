@@ -2,10 +2,10 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    top: 50px;
+    top: 90px;
     left: 0;
     transform: translateX(-130%);
-    transition: all 0.2s;
+    transition: all 2s;
     z-index: 8;
 }
 
@@ -18,10 +18,12 @@
     height: 100%;
     backdrop-filter: blur(20px);
     position: absolute;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .menuContent {
-    width: 30%;
+    width: 50%;
     height: 100%;
     background-color: black;
     display: flex;
@@ -57,4 +59,15 @@
     text-decoration: none;
     font-size: 1.3rem;
     cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .menuContent {
+        width: 100%;
+    } 
+
+    .menu {
+        top: 69px;
+    }
+
 }

@@ -85,11 +85,40 @@
 }
 
 .burgerBtn {
+    display: none;
     width: 30px;
     height: 30px;
     position: relative;
     margin-left: 20px;
     cursor: pointer;
+}
+
+.burgerBtn.active span {
+    display: none;
+    transition: all 2s;
+}
+
+.burgerBtn.active:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    background-color: black;
+    height: 3px;
+    border-radius: 20%;
+    transform: rotate(-45deg);
+    transition: all 2s;
+}
+.burgerBtn.active:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 30px;
+    background-color: black;
+    height: 3px;
+    border-radius: 20%;
+    transform: rotate(45deg);
+    transition: all 2s;
 }
 
 .burgerBtn:before {
@@ -125,7 +154,29 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
+    .burgerBtn {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+    .logo {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .auth a {
+        color: whitesmoke;
+        text-decoration: none;
+        font-size: 14px;
+        margin-left: 10px;
+        padding: 10px; /* Increased padding for better button size */
+        border-radius: 30px; /* Larger border-radius for a rounded button */
+        background-color: transparent; /* Initial background is transparent */
+    }
 }

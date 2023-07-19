@@ -32,7 +32,7 @@ const Header = (props) => {
             </div>
 
             <nav className={styles.bugerNav}>
-                <div className={styles.burgerBtn} onClick={() => props.setActive(!props.active)}>
+                <div className={props.active ? `${styles.burgerBtn} ${styles.active}` : styles.burgerBtn} onClick={() => props.setActive(!props.active)}>
                     <span />
                 </div>
             </nav>
