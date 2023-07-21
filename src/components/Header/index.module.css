@@ -92,10 +92,12 @@
     margin-left: 20px;
     cursor: pointer;
 }
+.burgerBtn span {
+    opacity: 1;
+}
 
 .burgerBtn.active span {
-    display: none;
-    transition: all 2s;
+    opacity: 0;
 }
 
 .burgerBtn.active:before {
@@ -107,7 +109,7 @@
     height: 3px;
     border-radius: 20%;
     transform: rotate(-45deg);
-    transition: all 2s;
+    transition: all 1s;
 }
 .burgerBtn.active:after {
     content: '';
@@ -118,7 +120,7 @@
     height: 3px;
     border-radius: 20%;
     transform: rotate(45deg);
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .burgerBtn:before {
@@ -129,6 +131,7 @@
     background-color: black;
     height: 3px;
     border-radius: 20%;
+    transition: all 1s;
 }
 
 .burgerBtn span {
@@ -139,6 +142,7 @@
     background-color: black;
     height: 3px;
     border-radius: 20%;
+    transition: all 1s;
 }
 
 .burgerBtn:after {
@@ -150,6 +154,7 @@
     height: 3px;
     border-radius: 20%;
     margin-bottom: 1px;
+    transition: all 1s;
 }
 
 /* Mobile styles */
