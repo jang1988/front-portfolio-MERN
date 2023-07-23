@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './index.module.css';
+import { Link } from 'react-router-dom';
 
 const BurgerMenu = ({ header, items, active }) => {
     return (
@@ -10,7 +11,7 @@ const BurgerMenu = ({ header, items, active }) => {
                     <ul className={style.menuList}>
                         {items.map((item) => (
                             <li key={item.value}>
-                                <a href={item.href}>{item.value}</a>
+                                <Link href={item.href}>{item.value}</Link>
                                 <span className="material-symbols-outlined">
                                     {item.icon}
                                 </span>

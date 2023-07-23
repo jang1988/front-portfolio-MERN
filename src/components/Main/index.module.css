@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     background: linear-gradient(135deg, #293133, #474a51); /* Gradient background */
     color: #fff; /* Text color */
     height: 80vh;

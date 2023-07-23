@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './index.module.css';
 import mainImg from '../../image/main-image.png';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
   return (
@@ -14,7 +15,7 @@ const Main = () => {
           years of JavaScript, HTML/CSS experience. I do projects on React, I build
           websites confidently. I improve hard & soft skills by learning new technologies.
         </p>
-        <a href="/about">Написать</a>
+        <Link to="/about">Написать</Link>
       </div>
 
       {/* Photo with rotating border */}

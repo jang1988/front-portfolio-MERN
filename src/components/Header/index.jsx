@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './index.module.css';
+import { Link } from 'react-router-dom';
 
 const Header = (props) => {
 
@@ -13,13 +14,13 @@ const Header = (props) => {
             <nav className={styles.menu}>
                 <ul>
                     <li>
-                        <a href="/">Главная</a>
+                        <Link href="/">Главная</Link>
                     </li>
                     <li>
-                        <a href="/about">О нас</a>
+                        <Link href="/about">О нас</Link>
                     </li>
                     <li>
-                        <a href="/services">Услуги</a>
+                        <Link href="/services">Услуги</Link>
                     </li>
                     {/* и другие пункты меню */}
                 </ul>
@@ -27,8 +28,8 @@ const Header = (props) => {
 
             <div className={styles.auth}>
                 {/* Здесь разместите ссылки на авторизацию, регистрацию и вход */}
-                <a href="/login">Вход</a>
-                <a href="/register">Регистрация</a>
+                <Link href="/login">Вход</Link>
+                <Link href="/register">Регистрация</Link>
             </div>
 
             <nav className={styles.bugerNav}>
