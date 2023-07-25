@@ -12,7 +12,7 @@ import Register from './pages/Register';
 function App() {
     const [menuActive, setMenuActive] = React.useState(false);
 
-    const items = [
+    const menuItems = [
         { value: 'Главная', href: '/', icon: 'chevron_left' },
         { value: 'О нас', href: '/about', icon: 'anchor' },
         { value: 'Услуги', href: '/services', icon: 'grade' },
@@ -20,7 +20,7 @@ function App() {
 
     return (
         <div className="App">
-            <Header active={menuActive} setActive={setMenuActive} />
+            <Header active={menuActive} setActive={setMenuActive} menuItems={menuItems} />
 
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -32,9 +32,8 @@ function App() {
 
             <BurgerMenu
                 active={menuActive}
-                setActive={setMenuActive}
                 header={'Меню'}
-                items={items}
+                menuItems={menuItems}
             />
         </div>
     );

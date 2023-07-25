@@ -14,13 +14,13 @@ const Header = (props) => {
             <nav className={styles.menu}>
                 <ul>
                     <li>
-                        <Link href="/">Главная</Link>
+                        <Link to="/">Главная</Link>
                     </li>
                     <li>
-                        <Link href="/about">О нас</Link>
+                        <Link to="/about">О нас</Link>
                     </li>
                     <li>
-                        <Link href="/services">Услуги</Link>
+                        <Link to="/services">Услуги</Link>
                     </li>
                     {/* и другие пункты меню */}
                 </ul>
@@ -28,8 +28,8 @@ const Header = (props) => {
 
             <div className={styles.auth}>
                 {/* Здесь разместите ссылки на авторизацию, регистрацию и вход */}
-                <Link href="/login">Вход</Link>
-                <Link href="/register">Регистрация</Link>
+                <Link to="/login">Вход</Link>
+                <Link to="/register">Регистрация</Link>
             </div>
 
             <nav className={styles.bugerNav}>
